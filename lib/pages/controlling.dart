@@ -98,7 +98,10 @@ class _controllingPageState extends State<controllingPage> {
                       trailing: Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(2),
-                          color: Colors.red,
+                          // color: Colors.red,
+                          color: (statusSwitch1 == true)
+                              ? Colors.purple
+                              : Colors.red,
                         ),
                         width: 20,
                         height: 20,
@@ -114,7 +117,9 @@ class _controllingPageState extends State<controllingPage> {
                       trailing: Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(2),
-                          color: Colors.red,
+                          color: (statusSwitch2 == true)
+                              ? Colors.purple
+                              : Colors.red,
                         ),
                         width: 20,
                         height: 20,
@@ -130,7 +135,9 @@ class _controllingPageState extends State<controllingPage> {
                       trailing: Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(2),
-                          color: Colors.red,
+                          color: (statusSwitch3 == true)
+                              ? Colors.purple
+                              : Colors.red,
                         ),
                         width: 20,
                         height: 20,
@@ -146,7 +153,9 @@ class _controllingPageState extends State<controllingPage> {
                       trailing: Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(2),
-                          color: Colors.red,
+                          color: (statusSwitch4 == true)
+                              ? Colors.purple
+                              : Colors.red,
                         ),
                         width: 20,
                         height: 20,
@@ -162,7 +171,9 @@ class _controllingPageState extends State<controllingPage> {
                       trailing: Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(2),
-                          color: Colors.red,
+                          color: (statusSwitch5 == true)
+                              ? Colors.purple
+                              : Colors.red,
                         ),
                         width: 20,
                         height: 20,
@@ -178,7 +189,9 @@ class _controllingPageState extends State<controllingPage> {
                       trailing: Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(2),
-                          color: Colors.red,
+                          color: (statusSwitch6 == true)
+                              ? Colors.purple
+                              : Colors.red,
                         ),
                         width: 20,
                         height: 20,
@@ -194,7 +207,9 @@ class _controllingPageState extends State<controllingPage> {
                       trailing: Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(2),
-                          color: Colors.red,
+                          color: (statusSwitch7 == true)
+                              ? Colors.purple
+                              : Colors.red,
                         ),
                         width: 20,
                         height: 20,
@@ -210,7 +225,9 @@ class _controllingPageState extends State<controllingPage> {
                       trailing: Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(2),
-                          color: Colors.red,
+                          color: (statusSwitch8 == true)
+                              ? Colors.purple
+                              : Colors.red,
                         ),
                         width: 20,
                         height: 20,
@@ -226,7 +243,9 @@ class _controllingPageState extends State<controllingPage> {
                       trailing: Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(2),
-                          color: Colors.red,
+                          color: (statusSwitch9 == true)
+                              ? Colors.purple
+                              : Colors.red,
                         ),
                         width: 20,
                         height: 20,
