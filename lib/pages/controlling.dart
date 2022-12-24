@@ -296,6 +296,10 @@ class _controllingPageState extends State<controllingPage> {
                                     onChanged: (value) {
                                       setState(() {
                                         statusSwitch1 = !statusSwitch1;
+                                        statusSwitch4 = value;
+                                        statusSwitch5 = value;
+                                        statusSwitch6 = value;
+                                        statusSwitch7 = value;
                                       });
                                     }),
                               ),
@@ -519,7 +523,27 @@ class _controllingPageState extends State<controllingPage> {
                                   ],
                                 ),
                                 onTap: () {
-                                  warningDialog();
+                                  if (statusSwitch1 == true ||
+                                      statusSwitch2 == true ||
+                                      statusSwitch3 == true ||
+                                      statusSwitch4 == true ||
+                                      statusSwitch5 == true ||
+                                      statusSwitch6 == true ||
+                                      statusSwitch7 == true ||
+                                      statusSwitch8 == true ||
+                                      statusSwitch9 == true) {
+                                    setState(() {
+                                      warningDialog();
+                                    });
+                                  } else {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            const controlOtomatisPage(),
+                                      ),
+                                    );
+                                  }
                                 },
                               ),
                             ],
@@ -591,33 +615,30 @@ class _controllingPageState extends State<controllingPage> {
       builder: (context) => AlertDialog(
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-            title: const Text('Warning'),
+            title: const Text('Warning !!!',
+                style:
+                    TextStyle(color: Colors.red, fontWeight: FontWeight.w500)),
             content: Text(
-                'Sebelum Memasuki Control Otomatis Pastikan Control Manual Mati!!',
+                'Sebelum Memasuki Control Otomatis Pastikan Control Manual Mati !!',
                 style: deskripsiTextStyle.copyWith(
-                    fontWeight: FontWeight.w400, color: Colors.red)),
+                    fontWeight: FontWeight.w400, color: Colors.black)),
             actions: [
-              TextButton(
-                  onPressed: () {
-                    setState(() {
-                      Navigator.pop(context);
-                    });
-                  },
-                  child: const Text('Batal',
-                      style: TextStyle(color: Colors.grey, fontSize: 14))),
-              TextButton(
-                  onPressed: () {
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const controlOtomatisPage(),
+              Center(
+                child: TextButton(
+                    onPressed: () {
+                      setState(() {
+                        Navigator.pop(context);
+                      });
+                    },
+                    child: SizedBox(
+                      width: double.infinity,
+                      child: Text(
+                        "Ok",
+                        textAlign: TextAlign.center,
+                        style: buttonStyle.copyWith(fontSize: 16),
                       ),
-                    );
-                  },
-                  child: Text(
-                    "Yakin",
-                    style: buttonStyle.copyWith(fontSize: 14),
-                  )),
+                    )),
+              ),
             ],
           ));
 

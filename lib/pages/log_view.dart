@@ -117,27 +117,66 @@ class _logViewState extends State<logView> with RestorationMixin {
                   const SizedBox(
                     height: 30,
                   ),
-                  Row(
-                    children: [
-                      IconButton(
-                        icon: const Icon(
-                          Icons.arrow_back_ios_new_outlined,
-                          color: Colors.white,
-                        ),
-                        onPressed: () {
-                          Navigator.of(context).pop();
-                        },
+                  ListTile(
+                    visualDensity:
+                        const VisualDensity(horizontal: 0, vertical: -4),
+                    dense: true,
+                    leading: InkWell(
+                      onTap: () {
+                        Navigator.of(context).pop();
+                      },
+                      child: const Icon(
+                        Icons.arrow_back_ios_new_outlined,
+                        color: Colors.white,
                       ),
-                      const SizedBox(
-                        width: 95,
-                      ),
-                      Text(
-                        'Date Picker',
+                    ),
+                    // leading: IconButton(
+                    //   alignment: Alignment.centerLeft,
+                    //   icon: const Icon(
+                    //     Icons.arrow_back_ios_new_outlined,
+                    //     color: Colors.white,
+                    //   ),
+                    //   onPressed: () {
+                    //     Navigator.of(context).pop();
+                    //   },
+                    // ),
+                    title: Padding(
+                      padding: const EdgeInsets.only(right: 50),
+                      child: Text(
+                        'Date Picker', textAlign: TextAlign.center,
                         style: selamatdatangTextStyle.copyWith(
-                            fontSize: 20, fontWeight: FontWeight.bold),
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        // textAlign: TextAlign.center,
                       ),
-                    ],
+                    ),
+                    // trailing: const SizedBox(width: 30),
                   ),
+                  // Row(
+                  //   children: [
+                  //     IconButton(
+                  //       icon: const Icon(
+                  //         Icons.arrow_back_ios_new_outlined,
+                  //         color: Colors.white,
+                  //       ),
+                  //       onPressed: () {
+                  //         Navigator.of(context).pop();
+                  //       },
+                  //     ),
+                  //     // const SizedBox(
+                  //     //   width: 95,
+                  //     // ),
+                  //     Center(
+                  //       widthFactor: 2.8,
+                  //       child: Text(
+                  //         'Date Picker',
+                  //         style: selamatdatangTextStyle.copyWith(
+                  //             fontSize: 20, fontWeight: FontWeight.bold),
+                  //       ),
+                  //     ),
+                  //   ],
+                  // ),
                   const SizedBox(
                     height: 5,
                   ),
